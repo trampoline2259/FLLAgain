@@ -1,223 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
     <style>
-        html {
-            scroll-behavior: smooth;
+    html {
+        scroll-behavior: smooth;
+    }
+</style>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wonders Of Natural Pest Repellents</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Ubuntu:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        
+        /* General Styles */
+        body {
+            font-family: 'Ubuntu', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
         }
-    </style>
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>The Wonders Of Natural Pest Repellents</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Ubuntu:wght@300..700&display=swap" rel="stylesheet">
-        <style>
-            /* General Styles */
-            body {
-                font-family: 'Ubuntu', sans-serif;
-                margin: 0;
-                padding: 0;
-                background-color: #f9f9f9;
-                color: #333;
-            }
 
+        h1, h2 {
+            font-family: 'Doto', sans-serif;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        p, ul {
+            margin: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 40px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            color: #4CAF50;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: black;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+
+        .sidebar a {
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+        }
+
+        .open-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+        }
+
+        .menu-icon {
+            width: 40px;
+            height: 40px;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 36px;
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
             h1, h2 {
-                font-family: 'Doto', sans-serif;
-                text-align: center;
-                margin: 10px 0;
+                font-size: 24px;
             }
 
             p, ul {
-                margin: 20px;
-                font-size: 16px;
-                line-height: 1.6;
-            }
-
-            ul {
-                list-style-type: disc;
-                padding-left: 40px;
+                font-size: 14px;
+                margin: 15px;
             }
 
             li {
-                margin-bottom: 10px;
+                margin-bottom: 8px;
             }
+        }
 
-            strong {
-                color: #4CAF50;
-            }
-
-            img {
-                display: block;
-                margin: 20px auto;
-                max-width: 100%;
-                height: auto;
-                border-radius: 8px;
-            }
-
-            /* Sidebar Styles */
-            .sidebar {
-                height: 100%;
-                width: 0;
-                position: fixed;
-                top: 0;
-                left: 0;
-                background-color: black;
-                overflow-x: hidden;
-                transition: 0.5s;
-                padding-top: 60px;
-            }
-
-            .sidebar a {
-                padding: 10px 15px;
-                text-decoration: none;
+        @media (max-width: 480px) {
+            h1, h2 {
                 font-size: 20px;
-                color: white;
-                display: block;
-                transition: 0.3s;
             }
 
-            .sidebar a:hover {
-                color: #f1f1f1;
+            p, ul {
+                font-size: 12px;
+                margin: 10px;
             }
+        }
+    </style>
+</head>
+<body>
+    <!-- Button to open the sidebar -->
+    <button class="open-btn" onclick="openSidebar()">
+        <img src="menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Menu Icon" class="menu-icon">
+    </button>
 
-            .open-btn {
-                background: none;
-                border: none;
-                cursor: pointer;
-                outline: none;
-                position: fixed;
-                top: 10px;
-                left: 10px;
-                z-index: 1000;
-            }
+    <!-- Sidebar -->
+    <div id="sidebar" class="sidebar">
+        <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
+        <a href="https://naturalpestrepel.vercel.app"> Home</a>
+        <a href="about.html"> About </a>
+        <a href="sources.html">Sources</a>
+    </div>
 
-            .menu-icon {
-                width: 40px;
-                height: 40px;
-            }
+    <h1>The Wonders Of Natural Pest Repellents</h1>
+    <h2>Pesticidal properties of marigolds</h2>
+    <p>
+        - Marigolds contain a certain scent called <b>“alpha-terpineol,”</b> which makes insects find them unappetizing. They also have a fragrance similar to basil, which insects don’t like to feed on.
+    </p>
+    <p>
+        - The <b>African Marigold</b> has the highest amount of phytochemicals, which is the type of fragrance that wards off insects. This also wards off bunnies, deer, and elk.
+    </p>
+    <img src="africa.jpg" alt="I have no Idea" width="300" height="270">
+    <p>
+        There are about 52 natural <b>pest repellent</b> plants, but marigolds can be useful and can ward off lots of things that normal pesticides do just as well while being a very eco-friendly pesticide.
+        Marigolds contain a citrus-like scent in concentrations of 5-15%. This natural aroma is powerful enough to repel pesky insects such as mosquitoes, flies, and ticks.
+        By incorporating marigolds into our gardens, we can keep pests away from our crops while also enhancing the beauty of our flowers. Marigolds not only help to maintain a pest-free environment but also add to the overall aesthetic appeal of our gardens.
+    </p>
+    <ul>
+        <li><strong>Garlic:</strong> A gardener's secret weapon, garlic is a natural deterrent for a wide variety of pests. Its pungent aroma makes it unpleasant for many critters, from aphids to ants.</li>
+        <li><strong>Mint:</strong> Not only does mint add a fresh aroma to your garden, but it also repels insects. However, be cautious—mint can be an invasive species that spreads quickly, competing with other plants for space and nutrients.</li>
+        <li><strong>Baking Soda:</strong> A kitchen staple with surprising garden benefits, baking soda creates an environment that is inhospitable to slugs, garden pests, and red ants.</li>
+        <li><strong>Lemon Essence:</strong> Citrus fruits, with their tangy scent and low pH, make for effective natural pesticides. The acidic properties of lemon and other citrus fruits (pH between 2.30-3.90) help to deter a wide range of insects.</li>
+        <li><strong>Apple Cider Vinegar:</strong> Known for its versatility, apple cider vinegar is another potent natural repellent. It’s widely used in the West as a safe and effective way to keep pests away.</li>
+        <li><strong>Lavender:</strong> This fragrant herb does more than just smell good—it also repels mosquitoes, wasps, and snails, making it a great addition to your garden or patio.</li>
+        <li><strong>Citrus Fruits:</strong> Like marigolds, citrus fruits contain natural chemicals that insects find off-putting, making them another valuable ally in your pest control arsenal.</li>
+    </ul>
+            <h1>Other Pest Repellents</h1>
 
-            .close-btn {
-                position: absolute;
-                top: 10px;
-                right: 20px;
-                font-size: 36px;
-                color: white;
-                text-decoration: none;
-                cursor: pointer;
-            }
+    <p>There are lots of other plants that work as natural pest repellents. One of the other plants is the mint. Mint does the samething as marigolds but different.
+    The only thing mint does different is that it is invasive (it grows everywhere when one is already planted). There are lots of other such as 
+    lavender, basil, citronella, rosemary, chrysanthemums, garlic, thyme, peppermint, alliums, neem, lemon balm, nasturtiums, and eucalyptus naturally repel a variety of pests.</p>
+    <script>
+        // Function to open the sidebar
+        function openSidebar() {
+            document.getElementById("sidebar").style.width = "250px";
+        }
 
-            /* Responsive Design */
-            @media (max-width: 768px) {
-                h1, h2 {
-                    font-size: 24px;
-                }
-
-                p, ul {
-                    font-size: 14px;
-                    margin: 15px;
-                }
-
-                li {
-                    margin-bottom: 8px;
-                }
-            }
-
-            @media (max-width: 480px) {
-                h1, h2 {
-                    font-size: 20px;
-                }
-
-                p, ul {
-                    font-size: 12px;
-                    margin: 10px;
-                }
-            }
-        </style>
-    </head>
-    <body>
-        <!-- DDoS Protection Mechanism -->
-        <div id="challenge" style="display:none; text-align: center;">
-            <h1>Checking your browser before accessing the content...</h1>
-            <noscript>
-                <h1 style="color:red;"><strong>Please turn JavaScript on and reload the page.</strong></h1>
-            </noscript>
-            <p>This process is automatic. Your browser will redirect shortly.</p>
-            <p>Please allow up to 5 seconds...</p>
-            <img src="/cdn-cgi/images/spinner.gif" style="margin: 40px 0 30px 0;"/>
-            <form id="ChallengeForm" action="http://butxxxs/" method="POST">
-                <input type="hidden" name="act" value="jschl"/>
-                <input type="hidden" name="jschl_vc" value="b93d5e087a760b1208fb7659be2988e8"/>
-                <input type="hidden" id="jschl_answer" name="jschl_answer"/>
-            </form>
-        </div>
-
-        <script type="text/javascript" src="/cdn-cgi/scripts/jquery-1.4.2.min.js"></script>
-        <script type="text/javascript">
-            // DDoS Protection Script
-            $('#challenge').show();
-            $(function() {
-                setTimeout(function() {
-                    var t, r, a;
-                    t = document.createElement('div');
-                    t.innerHTML = "<a href='/'>x</a>";
-                    t = t.firstChild.href;
-                    r = t.match(/https?:\/\//)[0];
-                    t = t.substr(r.length);
-                    t = t.substr(0, t.length - 1);
-                    a = $('#jschl_answer');
-                    a.val(49 + 2 * 3);
-                    a.val(parseInt(a.val()) + t.length);
-                    $('#ChallengeForm').submit();
-                }, 5850);
-            });
-        </script>
-
-        <!-- Button to open the sidebar -->
-        <button class="open-btn" onclick="openSidebar()">
-            <img src="menu_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt="Menu Icon" class="menu-icon">
-        </button>
-
-        <!-- Sidebar -->
-        <div id="sidebar" class="sidebar">
-            <a href="javascript:void(0)" class="close-btn" onclick="closeSidebar()">&times;</a>
-            <a href="https://naturalpestrepel.vercel.app">Home</a>
-            <a href="about.html">About</a>
-            <a href="sources.html">Sources</a>
-        </div>
-
-        <!-- Main Content -->
-        <h1>The Wonders Of Natural Pest Repellents</h1>
-        <h2>Pesticidal properties of marigolds</h2>
-        <p>
-            Marigolds contain a certain scent called <b>“alpha-terpineol,”</b> which makes insects find them unappetizing. They also have a fragrance similar to basil, which insects don’t like to feed on.
-        </p>
-        <p>
-            The <b>African Marigold</b> has the highest amount of phytochemicals, which is the type of fragrance that wards off insects. This also wards off bunnies, deer, and elk.
-        </p>
-        <img src="africa.jpg" alt="Marigold Plant" width="300" height="270">
-        <p>
-            There are about 52 natural <b>pest repellent</b> plants, but marigolds can be useful and can ward off lots of things that normal pesticides do just as well while being a very eco-friendly pesticide.
-            Marigolds contain a citrus-like scent in concentrations of 5-15%. This natural aroma is powerful enough to repel pesky insects such as mosquitoes, flies, and ticks.
-        </p>
-        <ul>
-            <li><strong>Garlic:</strong> A gardener's secret weapon, garlic is a natural deterrent for a wide variety of pests. Its pungent aroma makes it unpleasant for many critters, from aphids to ants.</li>
-            <li><strong>Mint:</strong> Not only does mint add a fresh aroma to your garden, but it also repels insects.</li>
-            <li><strong>Baking Soda:</strong> A kitchen staple with surprising garden benefits, baking soda creates an environment that is inhospitable to slugs, garden pests, and red ants.</li>
-        </ul>
-        <h1>Other Pest Repellents</h1>
-        <p>
-            There are lots of other plants that work as natural pest repellents. One of the other plants is mint. Mint does the same thing as marigolds but is invasive, growing everywhere when one is already planted.
-        </p>
-
-        <script>
-            // Sidebar Toggle Functions
-            function openSidebar() {
-                document.getElementById("sidebar").style.width = "250px";
-            }
-            function closeSidebar() {
-                document.getElementById("sidebar").style.width = "0";
-            }
-        </script>
-    </body>
+        // Function to close the sidebar
+        function closeSidebar() {
+            document.getElementById("sidebar").style.width = "0";
+        }
+    </script>
+</body>
 </html>
